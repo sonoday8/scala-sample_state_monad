@@ -46,7 +46,7 @@ object GameStat {
       }
       r <- s match {
         //文字がまだ有るならば、再帰実行
-        case Seq(x,_*) => playGame(s.tail)
+        case Seq(_, tail @ _*) => playGame(tail)
         //文字が無ければ、終了
         case _ => current
       }
