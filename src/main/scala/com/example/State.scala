@@ -10,14 +10,9 @@ object State {
 
   def mkState[S,A](a:A) = State((s:S) => (a, s)) // return
  
-//  def _state[S,A](f:S => (a:A,s:S)): State[S,Unit] = {
-//    for {
-//      s <- get[S]
-//      val (a,s_) = f(s)
-//      _ <- put(s_)
-//      mkState(a)
-//    }
-//  }
+  def evalState[S,A](s:State[S,A], a:S) = {
+      s.runState(a)
+  }
 }
 
 case class State[S, A](runState: S => (A, S)){

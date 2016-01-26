@@ -1,11 +1,11 @@
 package com.example
+import com.example.State._
 
 object ListState{
-  import com.example.State
 
   def getN(n:Int):State[List[Int],Int] = for {
-    st1 <- State.get[List[Int]]
-    _ <- State.put(st1 ++ List(n*2))
+    st1 <- get[List[Int]]
+    _ <- put(st1 ++ List(n*2))
   } yield n*2
 
   def mkListValueST = (
