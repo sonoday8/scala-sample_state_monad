@@ -8,10 +8,10 @@ object State {
     State[S,Unit]( _ => ((),s))
   }
 
-  def mkState[S,A](a:A) = State((s:S) => (a, s)) // return
+  def mkState[S,A](a:A):State[S,A] = State((s:S) => (a, s)) // return
  
-  def evalState[S,A](s:State[S,A], a:S) = {
-      s.runState(a)
+  def evalState[S,A](s:State[S,A], a:S):A = {
+      s.runState(a)._1
   }
 }
 

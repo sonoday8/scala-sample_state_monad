@@ -60,11 +60,16 @@ object GameStat {
 		def main(args:Array[String]){
 		  // aは+1、bは-1、cはトグルスイッチ、スイッチがtrueじゃないと加算減算できない。
       val seed = new Var(GameState(false,0));
-      println(evalState[Var[GameState],GameState](playGame("caacbcaa"), seed)._1.score)
+      println(evalState[Var[GameState],GameState](playGame("caacbcaa"), seed).score)
       println(playGame("ab").runState(seed)._1.score)
       println(playGame("ca").runState(seed)._1.score)
       println(playGame("cabca").runState(seed)._1.score)
       println(playGame("caaca").runState(seed)._1.score)
       println(playGame("caacbcaa").runState(seed)._1.score)
+      
+
+      def test(a:Int):(Int) => Int = a+
+      val t = test(1)
+      println(t(2))
     }
 }
