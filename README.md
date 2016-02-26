@@ -6,7 +6,7 @@ ListStateは、
 
 GameStatは、
 
-以下のページの問題２のをScalaでも実装できるかどうかを試しました。
+以下のページの問題２をScalaでも実装できるかどうかを試しました。
 
 「Stateモナドで遊んでみよう」http://qiita.com/tsukimizake774/items/9c60c9e06ebc56b648b7
 
