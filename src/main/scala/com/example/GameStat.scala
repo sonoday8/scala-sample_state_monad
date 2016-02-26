@@ -57,8 +57,8 @@ object GameStat {
     } yield r
   }
   
-		def main(args:Array[String]){
-		  // aは+1、bは-1、cはトグルスイッチ、スイッチがtrueじゃないと加算減算できない。
+    def main(args:Array[String]){
+      // aは+1、bは-1、cはトグルスイッチ、スイッチがtrueじゃないと加算減算できない。
       val seed = new Var(GameState(false,0));
       println(evalState[Var[GameState],GameState](playGame("caacbcaa"), seed).score)
       println(playGame("ab").runState(seed)._1.score)
