@@ -66,10 +66,5 @@ object GameStat {
       println(playGame("cabca").runState(seed)._1.score)
       println(playGame("caaca").runState(seed)._1.score)
       println(playGame("caacbcaa").runState(seed)._1.score)
-      
-
-      def test(a:Int):(Int) => Int = a+
-      val t = test(1)
-      println(t(2))
     }
 }
